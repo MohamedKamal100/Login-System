@@ -77,8 +77,9 @@ document.querySelector(".signUp").addEventListener("click", function () {
 });
 
 // =====================Login============
-
-var username = localStorage.getItem("sessionUsername");
+if (localStorage.getItem("sessionUsername") != null) {
+  var username = localStorage.getItem("sessionUsername");
+}
 if (username) {
   document.querySelector(".username").innerHTML = "Welcome " + username;
 }
@@ -99,9 +100,13 @@ function login() {
       document
         .querySelector("div.homeContainer")
         .classList.replace("d-none", "d-block");
-      document.querySelector(".username").innerHTML = "Welcome " + username;
+      // document.querySelector(".username").innerHTML = "Welcome " + username;
       document.querySelector("div.loginContaier").classList.add("d-none");
-      localStorage.setItem("sessionUsername", signUpContainer[i].userName);
+
+      localStorage.setItem(
+        "sessionUsername",
+        JSON.stringify(signUpContainer[i].userName)
+      );
     } else {
       document.querySelector(".error").innerHTML =
         '<span class="p-2 text-danger">incorrect email or password</span>';
