@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style css -->
+
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <body>
+    <div class="loginContaier container my-5 text-center">
+      <div class="group w-75 m-auto p-5">
+        <h1>Smart Login System</h1>
+        <input
+          class="form-control my-3 signInEmail"
+          placeholder="Enter your email"
+          type="text"
+        />
+        <input
+          class="form-control my-3 signInPassword"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <p class="error"></p>
+        <button class="btn btn-outline-info w-100 my-3 login">Login</button>
+        <p class="text-white">
+          Don’t have an account?
+          <a class="text-white goSignUp" href="">Sign Up</a>
+        </p>
+      </div>
+    </div>
+    <div class="signUpContainer container my-5 text-center d-none">
+      <div class="group m-auto w-75 p-5">
+        <h1>Smart Login System</h1>
+
+        <input
+          class="form-control signupName my-3"
+          placeholder="Enter your name"
+          type="text"
+        />
+        <input
+          class="form-control my-3 signupEmail"
+          placeholder="Enter your email"
+          type="email"
+        />
+
+        <input
+          class="form-control my-3 signupPassword"
+          placeholder="Enter  password"
+          type="password"
+        />
+        <p class="exist"></p>
+
+        <button class="btn btn-outline-info w-100 my-3 signUp">Sign Up</button>
+        <p class="text-white">
+          You have an account? <a class="text-white goLogin" href="">Signin</a>
+        </p>
+      </div>
+    </div>
+    <div class="homeContainer d-none">
+      <nav class="navbar navbar-expand-lg navbar-dark group">
+        <div class="container">
+          <a class="navbar-brand text-capitalize" href="#">Smart Login</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li>
+                <button
+                  class="btn btn-outline-warning logoutBtn w-100 mt-sm-3 mt-lg-0"
+                  type="submit"
+                >
+                  LOG OUT
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container my-5 text-center h-100 d-flex align-items-center">
+        <div class="group m-auto w-75 p-5 my-5">
+          <h1 class="username"></h1>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
